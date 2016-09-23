@@ -1,13 +1,14 @@
 package com.game.gaika.scene.dialg;
 
+import com.game.frame.scene.dialg.DialogScene;
 import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.GameDataManager;
 import com.game.gaika.data.ID;
 import com.game.gaika.data.weapon.BaseWeapon;
-import com.game.gaika.scene.BaseLogicScene;
-import com.game.gaika.sprite.NormalSprite;
-import com.game.gaika.sprite.TextSprite;
-import com.game.gaika.texture.TexRegionManager;
+import com.game.frame.scene.BaseLogicScene;
+import com.game.frame.sprite.NormalSprite;
+import com.game.frame.sprite.TextSprite;
+import com.game.frame.texture.TexRegionManager;
 
 import static com.game.gaika.data.ID.MSG_ID.MSG_SCENE_BATTLEFIELD__BLUE_REPAIR_NO;
 import static com.game.gaika.data.ID.MSG_ID.MSG_SCENE_BATTLEFIELD__BLUE_REPAIR_YES;

@@ -1,7 +1,7 @@
 package com.game.gaika.data;
 
 //import com.game.gaika.action.StatusMachine;
-//import com.game.gaika.graph.TexRegionManager;
+//import com.game.frame.graph.TexRegionManager;
 //import com.game.gaika.id.ID;
 
 

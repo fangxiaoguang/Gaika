@@ -8,7 +8,7 @@ import com.game.gaika.scene.BattlefieldScene;
 import com.game.gaika.scene.ChapterCompleteScene;
 import com.game.gaika.scene.ChapterLoseScene;
 import com.game.gaika.scene.SceneManager;
-import com.game.gaika.sprite.DelaySprite;
+import com.game.frame.sprite.DelaySprite;
 
 import java.util.Random;
 

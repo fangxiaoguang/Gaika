@@ -1,13 +1,13 @@
 package com.game.gaika.scene;
 
+import com.game.frame.scene.BaseLogicScene;
 import com.game.gaika.FSM.IMessageHandler;
 import com.game.gaika.FSM.TouchMessage;
-import com.game.gaika.sound.SoundManager;
-import com.game.gaika.sprite.DelaySprite;
-import com.game.gaika.sprite.NormalSprite;
-import com.game.gaika.sprite.TextSprite;
-import com.game.gaika.string.StringManager;
-import com.game.gaika.texture.TexRegionManager;
+import com.game.frame.sprite.DelaySprite;
+import com.game.frame.sprite.NormalSprite;
+import com.game.frame.sprite.TextSprite;
+import com.game.frame.string.StringManager;
+import com.game.frame.texture.TexRegionManager;
 
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.modifier.DelayModifier;
@@ -20,7 +20,7 @@ import java.util.List;
 
 import static com.game.gaika.data.ID.SCENE_ID.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
-import static com.game.gaika.sound.SoundManager.playSound;
+import static com.game.frame.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/17.

@@ -7,7 +7,7 @@ import com.game.gaika.data.ID;
 import com.game.gaika.data.weapon.BaseWeapon;
 import com.game.gaika.scene.BattlefieldScene;
 import com.game.gaika.scene.SceneManager;
-import com.game.gaika.sprite.DelaySprite;
+import com.game.frame.sprite.DelaySprite;
 
 /**
  * Created by fangxg on 2015/8/7.

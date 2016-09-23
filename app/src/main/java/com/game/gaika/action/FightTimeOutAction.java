@@ -8,10 +8,9 @@ import com.game.gaika.data.weapon.BaseWeapon;
 import com.game.gaika.scene.BattlefieldScene;
 import com.game.gaika.scene.SceneManager;
 import com.game.gaika.scene.dialg.LvUpDialogScene;
-import com.game.gaika.sound.SoundManager;
-import com.game.gaika.sprite.DelaySprite;
+import com.game.frame.sprite.DelaySprite;
 
-import static com.game.gaika.sound.SoundManager.playSound;
+import static com.game.frame.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/7/24.

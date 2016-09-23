@@ -1,9 +1,10 @@
 package com.game.gaika.scene;
 
+import com.game.frame.scene.BaseLogicScene;
 import com.game.gaika.FSM.IMessageHandler;
 import com.game.gaika.FSM.TouchMessage;
-import com.game.gaika.sprite.DelaySprite;
-import com.game.gaika.sprite.NormalSprite;
+import com.game.frame.sprite.DelaySprite;
+import com.game.frame.sprite.NormalSprite;
 
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.modifier.DelayModifier;

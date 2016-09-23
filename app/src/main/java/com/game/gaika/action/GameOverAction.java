@@ -2,7 +2,7 @@ package com.game.gaika.action;
 
 import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.ID;
-import com.game.gaika.scene.BaseLogicScene;
+import com.game.frame.scene.BaseLogicScene;
 import com.game.gaika.scene.SceneFactory;
 import com.game.gaika.scene.SceneManager;
 import com.game.gaika.scene.dialg.Dialg6YesNoDialogScene;

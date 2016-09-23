@@ -1,5 +1,6 @@
 package com.game.gaika.scene.dialg;
 
+import com.game.frame.scene.dialg.DialogScene;
 import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.action.BattlefieldInfoAction;
 import com.game.gaika.action.DataLoadAction;
@@ -11,15 +12,13 @@ import com.game.gaika.action.TeamListAction;
 import com.game.gaika.action.TurnFinishAction;
 import com.game.gaika.data.GameSetup;
 import com.game.gaika.data.ID;
-import com.game.gaika.scene.BaseLogicScene;
+import com.game.frame.scene.BaseLogicScene;
 import com.game.gaika.scene.SceneManager;
-import com.game.gaika.scene.dialg.DialogScene;
-import com.game.gaika.sound.SoundManager;
-import com.game.gaika.sprite.NormalSprite;
+import com.game.frame.sprite.NormalSprite;
 
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
-import static com.game.gaika.sound.SoundManager.playSound;
+import static com.game.frame.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/22.

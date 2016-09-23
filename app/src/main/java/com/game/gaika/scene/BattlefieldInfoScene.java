@@ -1,16 +1,16 @@
 package com.game.gaika.scene;
 
+import com.game.frame.scene.BaseLogicScene;
 import com.game.gaika.FSM.IMessageHandler;
 import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.City;
 import com.game.gaika.data.GameDataManager;
 import com.game.gaika.data.GameTimer;
 import com.game.gaika.data.ID;
-import com.game.gaika.scene.sub.borderSubScene;
-import com.game.gaika.sprite.NormalSprite;
-import com.game.gaika.sprite.NumberSprite;
-import com.game.gaika.sprite.TextSprite;
-import com.game.gaika.texture.TexRegionManager;
+import com.game.frame.sprite.NormalSprite;
+import com.game.frame.sprite.NumberSprite;
+import com.game.frame.sprite.TextSprite;
+import com.game.frame.texture.TexRegionManager;
 
 import java.util.ArrayList;
 import java.util.List;

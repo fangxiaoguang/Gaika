@@ -1,7 +1,5 @@
 package com.game.gaika.action;
 
-import android.util.Log;
-
 import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.ai.BaseArtificialIntelligence;
 import com.game.gaika.ai.strategy.BaseStrategic;
@@ -12,13 +10,12 @@ import com.game.gaika.data.WeaponSelectFilter;
 import com.game.gaika.data.weapon.BaseWeapon;
 import com.game.gaika.scene.BattlefieldScene;
 import com.game.gaika.scene.SceneManager;
-import com.game.gaika.sound.SoundManager;
-import com.game.gaika.sprite.DelaySprite;
+import com.game.frame.sprite.DelaySprite;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.game.gaika.sound.SoundManager.playSound;
+import static com.game.frame.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/8/7.

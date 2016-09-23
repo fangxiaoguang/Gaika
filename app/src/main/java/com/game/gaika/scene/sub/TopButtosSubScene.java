@@ -3,7 +3,7 @@ package com.game.gaika.scene.sub;
 import com.game.gaika.FSM.IMessageHandler;
 import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.ID;
-import com.game.gaika.scene.BaseLogicScene;
+import com.game.frame.scene.BaseLogicScene;
 import com.game.gaika.scene.DiplomacyScene;
 import com.game.gaika.scene.SceneManager;
 import com.game.gaika.scene.SelectTargetScene;
@@ -12,13 +12,12 @@ import com.game.gaika.scene.TeamBuildScene;
 import com.game.gaika.scene.WeaponBuyScene;
 import com.game.gaika.scene.WeaponRepairScene;
 import com.game.gaika.scene.WeaponSellScene;
-import com.game.gaika.sound.SoundManager;
-import com.game.gaika.sprite.NormalSprite;
+import com.game.frame.sprite.NormalSprite;
 
 import static com.game.gaika.data.ID.MSG_ID.*;
 
 import static com.game.gaika.data.ID.SCENE_ID.*;
-import static com.game.gaika.sound.SoundManager.playSound;
+import static com.game.frame.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/28.

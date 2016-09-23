@@ -1,10 +1,11 @@
 package com.game.gaika.sprite;
 
+import com.game.frame.sprite.BaseSprite;
 import com.game.gaika.data.City;
 import com.game.gaika.data.GameDataManager;
 import com.game.gaika.data.GameMap;
 import com.game.gaika.data.ID;
-import com.game.gaika.flyweight.NormalFlyweight;
+import com.game.frame.flyweight.NormalFlyweight;
 import com.game.gaika.scene.SceneManager;
 
 /**

@@ -1,9 +1,10 @@
 package com.game.gaika.sprite;
 
+import com.game.frame.sprite.BaseSprite;
 import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.GameDataManager;
 import com.game.gaika.data.weapon.BaseWeapon;
-import com.game.gaika.flyweight.NormalFlyweight;
+import com.game.frame.flyweight.NormalFlyweight;
 
 /**
  * Created by fangxg on 2015/6/28.

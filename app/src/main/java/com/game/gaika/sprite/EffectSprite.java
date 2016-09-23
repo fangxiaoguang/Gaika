@@ -1,7 +1,8 @@
 package com.game.gaika.sprite;
 
+import com.game.frame.sprite.BaseSprite;
 import com.game.gaika.data.EffectNode;
-import com.game.gaika.flyweight.AnimeFlyweight;
+import com.game.frame.flyweight.AnimeFlyweight;
 
 import org.andengine.entity.modifier.AlphaModifier;
 import org.andengine.entity.modifier.DelayModifier;

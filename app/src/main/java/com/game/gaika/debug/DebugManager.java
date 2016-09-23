@@ -9,8 +9,7 @@ import com.game.gaika.data.GameDataManager;
 import com.game.gaika.data.GameSetup;
 import com.game.gaika.data.ID;
 import com.game.gaika.data.SaveManager;
-import com.game.gaika.db.DatabaseManager;
-import com.game.gaika.scene.BattlefieldScene;
+import com.game.frame.db.DatabaseManager;
 
 /**
  * Created by fangxg on 2015/7/18.

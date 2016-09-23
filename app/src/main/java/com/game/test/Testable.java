@@ -1,8 +1,7 @@
 package com.game.test;
 
 import com.game.gaika.data.ID;
-import com.game.gaika.scene.BaseLogicScene;
-import com.game.gaika.sprite.BaseSprite;
+import com.game.frame.scene.BaseLogicScene;
 
 /**
  * Created by devuser1 on 2016/9/22.

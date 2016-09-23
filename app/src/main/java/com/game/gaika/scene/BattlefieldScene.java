@@ -1,6 +1,7 @@
 package com.game.gaika.scene;
 
 
+import com.game.frame.scene.BaseLogicScene;
 import com.game.gaika.action.AiBuyNextAction;
 import com.game.gaika.action.AiBuyTimeOutAction;
 import com.game.gaika.action.AiCapliuringTimeOutAction;
@@ -63,16 +64,15 @@ import com.game.gaika.data.WeaponSelectFilter;
 import com.game.gaika.data.weapon.BaseWeapon;
 import com.game.gaika.debug.DebugManager;
 import com.game.gaika.main.MainActivity;
-import com.game.gaika.scene.camera.BaseLogicCamera;
-import com.game.gaika.scene.camera.CameraRange;
-import com.game.gaika.scene.camera.ZoomSceneCamera;
+import com.game.frame.scene.camera.BaseLogicCamera;
+import com.game.frame.scene.camera.CameraRange;
+import com.game.frame.scene.camera.ZoomSceneCamera;
 import com.game.gaika.scene.hud.BattlefieldHUDScene;
-import com.game.gaika.sound.SoundManager;
 import com.game.gaika.sprite.BattlefieldWeaponSprite;
 import com.game.gaika.sprite.CitySprite;
 import com.game.gaika.sprite.ColorBoxSprite;
 import com.game.gaika.sprite.EffectSprite;
-import com.game.gaika.sprite.NormalSprite;
+import com.game.frame.sprite.NormalSprite;
 
 import org.andengine.engine.camera.Camera;
 import org.andengine.entity.scene.IOnSceneTouchListener;
@@ -89,7 +89,7 @@ import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
 
 import static com.game.gaika.scene.BattlefieldScene.StateID.*;
-import static com.game.gaika.sound.SoundManager.playSound;
+import static com.game.frame.sound.SoundManager.playSound;
 
 
 /**

@@ -1,9 +1,6 @@
 package com.game.test;
 
-import android.app.Activity;
-
 import com.game.gaika.data.ID;
-import com.game.gaika.sprite.BaseSprite;
 
 /**
  * Created by devuser1 on 2016/9/22.

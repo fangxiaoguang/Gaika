@@ -1,15 +1,16 @@
 package com.game.gaika.sprite;
 
+import com.game.frame.sprite.BaseSprite;
 import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.GameSetup;
 import com.game.gaika.data.GameTimer;
 import com.game.gaika.data.SaveManager;
-import com.game.gaika.flyweight.BaseFlyweight;
-import com.game.gaika.flyweight.FileFlyweight;
-import com.game.gaika.flyweight.NormalFlyweight;
-import com.game.gaika.flyweight.NumberFlyweight;
-import com.game.gaika.flyweight.TextFlyweight;
-import com.game.gaika.texture.TexRegionManager;
+import com.game.frame.flyweight.BaseFlyweight;
+import com.game.frame.flyweight.FileFlyweight;
+import com.game.frame.flyweight.NormalFlyweight;
+import com.game.frame.flyweight.NumberFlyweight;
+import com.game.frame.flyweight.TextFlyweight;
+import com.game.frame.texture.TexRegionManager;
 
 import java.io.File;
 

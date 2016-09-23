@@ -1,5 +1,6 @@
 package com.game.gaika.scene;
 
+import com.game.frame.scene.BaseLogicScene;
 import com.game.gaika.data.ID;
 
 import static com.game.gaika.data.ID.SCENE_INIT_TYPE.*;

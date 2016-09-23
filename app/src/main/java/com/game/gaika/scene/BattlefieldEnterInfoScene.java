@@ -1,5 +1,6 @@
 package com.game.gaika.scene;
 
+import com.game.frame.scene.BaseLogicScene;
 import com.game.gaika.FSM.IMessageHandler;
 import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.City;
@@ -8,17 +9,16 @@ import com.game.gaika.data.GameDataManager;
 import com.game.gaika.data.GameSetup;
 import com.game.gaika.data.ID;
 import com.game.gaika.data.SaveManager;
-import com.game.gaika.scene.camera.BaseLogicCamera;
-import com.game.gaika.scene.camera.CameraRange;
-import com.game.gaika.scene.camera.ZoomSceneCamera;
+import com.game.frame.scene.camera.BaseLogicCamera;
+import com.game.frame.scene.camera.CameraRange;
+import com.game.frame.scene.camera.ZoomSceneCamera;
 import com.game.gaika.scene.hud.BattlefieldEnterInfoHUDScene;
-import com.game.gaika.sound.SoundManager;
 import com.game.gaika.sprite.CitySprite;
-import com.game.gaika.sprite.NormalSprite;
+import com.game.frame.sprite.NormalSprite;
 
 import org.andengine.input.touch.detector.SurfaceScrollDetector;
 
-import static com.game.gaika.sound.SoundManager.playSound;
+import static com.game.frame.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/8/17.

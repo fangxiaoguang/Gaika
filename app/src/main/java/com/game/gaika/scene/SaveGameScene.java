@@ -1,5 +1,6 @@
 package com.game.gaika.scene;
 
+import com.game.frame.scene.BaseLogicScene;
 import com.game.gaika.FSM.IMessageHandler;
 import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.GameDataManager;
@@ -8,11 +9,10 @@ import com.game.gaika.data.ID;
 import com.game.gaika.data.SaveManager;
 import com.game.gaika.scene.dialg.Dialg6YesNoDialogScene;
 import com.game.gaika.scene.sub.borderSubScene;
-import com.game.gaika.sound.SoundManager;
 import com.game.gaika.sprite.GameSaveSprite;
-import com.game.gaika.sprite.NormalSprite;
-import com.game.gaika.sprite.NumberSprite;
-import com.game.gaika.string.StringManager;
+import com.game.frame.sprite.NormalSprite;
+import com.game.frame.sprite.NumberSprite;
+import com.game.frame.string.StringManager;
 
 
 import java.util.Map;
@@ -20,7 +20,7 @@ import java.util.Map;
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
 import static com.game.gaika.data.ID.SCENE_INIT_TYPE.NOT_INIT;
-import static com.game.gaika.sound.SoundManager.playSound;
+import static com.game.frame.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/7/2.

@@ -1,5 +1,6 @@
 package com.game.gaika.scene.hud;
 
+import com.game.frame.scene.hud.HUDScene;
 import com.game.gaika.FSM.IMessageHandler;
 import com.game.gaika.FSM.TouchMessage;
 
@@ -10,13 +11,13 @@ import com.game.gaika.data.GameSetup;
 import com.game.gaika.data.ID;
 import com.game.gaika.data.weapon.BaseWeapon;
 import com.game.gaika.debug.DebugManager;
-import com.game.gaika.flyweight.BaseFlyweight;
+import com.game.frame.flyweight.BaseFlyweight;
 import com.game.gaika.sprite.HqMapSprite;
-import com.game.gaika.sprite.NormalSprite;
-import com.game.gaika.sprite.NumberSprite;
-import com.game.gaika.sprite.TextSprite;
+import com.game.frame.sprite.NormalSprite;
+import com.game.frame.sprite.NumberSprite;
+import com.game.frame.sprite.TextSprite;
 import com.game.gaika.sprite.WeaponInfoSprite;
-import com.game.gaika.texture.TexRegionManager;
+import com.game.frame.texture.TexRegionManager;
 
 import org.andengine.entity.IEntity;
 import org.andengine.entity.modifier.AlphaModifier;

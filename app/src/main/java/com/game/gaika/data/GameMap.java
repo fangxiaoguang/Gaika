@@ -2,16 +2,13 @@ package com.game.gaika.data;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
 import com.game.gaika.data.weapon.BaseWeapon;
-import com.game.gaika.db.DatabaseManager;
-import com.game.gaika.debug.DebugManager;
+import com.game.frame.db.DatabaseManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 

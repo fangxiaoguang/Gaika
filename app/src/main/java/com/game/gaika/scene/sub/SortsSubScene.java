@@ -25,6 +25,7 @@ import static com.game.gaika.data.ID.SORT_ASCEND.*;
 import static com.game.gaika.scene.sub.SortsSubScene.ShowStatic.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/23.
@@ -118,7 +119,7 @@ public class SortsSubScene extends BaseLogicScene implements IMessageHandler {
 
         //MSG_BUTTON_SORT, MSG_BUTTON_TYPE, MSG_BUTTON_NAME, MSG_BUTTON_LEVEL, MSG_BUTTON_SUPPLY, MSG_BUTTON_ASCEND
         if (pTouchMessage.getMessageID() == MSG_SCENE_SORTS_SUB__BUTTON_SORT) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             getParentScene().getSceneValuesMap().setEnum("sortShowState" + subTag, SHOW_STATIC_SHOW_MENU);
             getParentScene().getSceneValuesMap().remove("selectedWeaponID" + subTag);
 
@@ -185,7 +186,7 @@ public class SortsSubScene extends BaseLogicScene implements IMessageHandler {
             SceneManager.render(baseLogicScene);
         }
         if (pTouchMessage.getMessageID() == MSG_SCENE_SORTS_SUB__BUTTON_ASCEND) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             if (getParentScene().getSceneValuesMap().getEnum("sortAscend" + subTag) == UP) {
                 getParentScene().getSceneValuesMap().setEnum("sortAscend" + subTag, DOWN);
             } else if (getParentScene().getSceneValuesMap().getEnum("sortAscend" + subTag) == DOWN) {

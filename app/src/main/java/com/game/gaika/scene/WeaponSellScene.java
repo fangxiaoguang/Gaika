@@ -41,6 +41,7 @@ import static com.game.gaika.data.ID.TEAM_COLOR.*;
 
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/7/1.
@@ -188,14 +189,14 @@ public class WeaponSellScene extends BaseLogicScene implements IMessageHandler {
         SceneValueMap sceneValues = getSceneValuesMap();
         ID.MSG_ID msgID = pTouchMessage.getMessageID();
         if (msgID == MSG_SCENE_WEAPON_SELL__UP_LEFT) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
             sceneValues.remove("selectedWeaponIDUp");
             sceneValues.setInt("pageUp", sceneValues.getInt("pageUp") - 1);
             WeaponSellScene scene = new WeaponSellScene(false);
             SceneManager.render(scene);
         }
         if (msgID == MSG_SCENE_WEAPON_SELL__UP_RIGHT) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
             sceneValues.remove("selectedWeaponIDUp");
             sceneValues.setInt("pageUp", sceneValues.getInt("pageUp") + 1);
             WeaponSellScene scene = new WeaponSellScene(false);
@@ -205,7 +206,7 @@ public class WeaponSellScene extends BaseLogicScene implements IMessageHandler {
         if (msgID == MSG_SCENE_WEAPON_SELL__SELECT_WEAPON_UP) {
             int newSelectedWeaponID = pTouchMessage.getParam();
             GameDataManager gdm = GameDataManager.getInstance();
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             if (sceneValues.containsKey("selectedWeaponIDUp") == true && sceneValues.getInt("selectedWeaponIDUp") == newSelectedWeaponID) {
                 sceneValues.remove("selectedWeaponIDUp");
                 BaseWeapon weapon = gdm.weapons.get(newSelectedWeaponID);
@@ -225,12 +226,12 @@ public class WeaponSellScene extends BaseLogicScene implements IMessageHandler {
             SceneManager.render(scene);
         }
         if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_YES) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             BaseAction act = new GameOverDilogYesAction();
             act.doAction();
         }
         if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_NO) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             BaseAction act = new GameOverDilogNoAction();
             act.doAction();
         }

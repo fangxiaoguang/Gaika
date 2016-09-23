@@ -18,6 +18,8 @@ import com.game.gaika.sprite.NormalSprite;
 
 import org.andengine.input.touch.detector.SurfaceScrollDetector;
 
+import static com.game.gaika.sound.SoundManager.playSound;
+
 /**
  * Created by fangxg on 2015/8/17.
  */
@@ -89,7 +91,7 @@ public class BattlefieldEnterInfoScene extends BaseLogicScene implements IMessag
         }
 
         if (msgID == ID.MSG_ID.MSG_SCENE_BATTLEFIELD_ENTER_INFO_HUD__BUTTON1) { //enter
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             SaveManager.enterChapter(newSelectedChapterID);
 
             if (finishedCount == 0) {
@@ -107,7 +109,7 @@ public class BattlefieldEnterInfoScene extends BaseLogicScene implements IMessag
             }
         }
         if (msgID == ID.MSG_ID.MSG_SCENE_BATTLEFIELD_ENTER_INFO_HUD__BUTTON2) { // back
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             if (finishedCount == 0) {
                 BeginCountyScene beginCountyScene = new BeginCountyScene();
                 SceneManager.render(beginCountyScene);

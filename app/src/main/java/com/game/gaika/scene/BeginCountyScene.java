@@ -21,6 +21,7 @@ import static com.game.gaika.data.ID.MSG_ID.*;
 
 import static com.game.gaika.data.ID.SCENE_ID.*;
 import static com.game.gaika.data.ID.COUNTRY.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 
 /**
@@ -188,7 +189,7 @@ public class BeginCountyScene extends BaseLogicScene implements IMessageHandler,
         GameDataManager gdm = GameDataManager.getInstance();
         ID.MSG_ID msgID = pTouchMessage.getMessageID();
         if (msgID == MSG_SCENE_COUNTRY_MENU__BUTTON_BACK) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             BeginLocalScene beginLocalScene = new BeginLocalScene();
             SceneManager.render(beginLocalScene);
         }
@@ -196,7 +197,7 @@ public class BeginCountyScene extends BaseLogicScene implements IMessageHandler,
                 || msgID == MSG_SCENE_COUNTRY_MENU__BUTTON_SELECT_COUNTY_3 || msgID == MSG_SCENE_COUNTRY_MENU__BUTTON_SELECT_COUNTY_4
                 || msgID == MSG_SCENE_COUNTRY_MENU__BUTTON_SELECT_COUNTY_5 || msgID == MSG_SCENE_COUNTRY_MENU__BUTTON_SELECT_COUNTY_6) {
 
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             if (msgID == MSG_SCENE_COUNTRY_MENU__BUTTON_SELECT_COUNTY_1) {
                 gdm.gameBeginCounty = USA;
             }

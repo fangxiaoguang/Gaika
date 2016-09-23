@@ -14,6 +14,8 @@ import com.game.gaika.sprite.DelaySprite;
 
 import java.util.List;
 
+import static com.game.gaika.sound.SoundManager.playSound;
+
 /**
  * Created by fangxg on 2015/8/18.
  */
@@ -58,7 +60,7 @@ public class AiBuyNextAction implements   BaseAction {
             tWeapon.doSetOut(tCity);
             gdm.setSupply(aiTeamColor, gdm.getSupply(aiTeamColor) - tWeapon.info.supply);
 //------------------------
-            SoundManager.getInstance().playSound("haichi01");
+           playSound("haichi01");
             BattlefieldScene battlefieldScene = new BattlefieldScene(false);
             battlefieldScene.addSprite(new DelaySprite(GameSetup.DELAY_AI_BUY_NEXT_S, new TouchMessage(ID.MSG_ID.MSG_SCENE_BATTLEFIELD__AI_BUY_NEXT, null, battlefieldScene)));
             battlefieldScene.getLogicCamera().setCente(tCity.getPixelX(), tCity.getPixelY());

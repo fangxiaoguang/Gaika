@@ -44,6 +44,7 @@ import static com.game.gaika.data.ID.STOR_TYPE.TYPE;
 import static com.game.gaika.data.ID.TEAM_COLOR.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/30.
@@ -191,14 +192,14 @@ public class WeaponRepairScene extends BaseLogicScene implements IMessageHandler
         SceneValueMap sceneValues = getSceneValuesMap();
         ID.MSG_ID msgID = pTouchMessage.getMessageID();
         if (msgID == MSG_SCENE_WEAPON_REPAIR__UP_LEFT) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
             sceneValues.remove("selectedWeaponIDUp");
             sceneValues.setInt("pageUp", sceneValues.getInt("pageUp") - 1);
             WeaponRepairScene weaponRepairScene = new WeaponRepairScene(false);
             SceneManager.render(weaponRepairScene);
         }
         if (msgID == MSG_SCENE_WEAPON_REPAIR__UP_RIGHT) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
             sceneValues.remove("selectedWeaponIDUp");
             sceneValues.setInt("pageUp", sceneValues.getInt("pageUp") + 1);
             WeaponRepairScene weaponRepairScene = new WeaponRepairScene(false);
@@ -212,7 +213,7 @@ public class WeaponRepairScene extends BaseLogicScene implements IMessageHandler
                 BaseWeapon weapon = gdm.weapons.get(newSelectedWeaponID);
                 if (weapon.info.price <= gdm.money) {
 
-                    SoundManager.getInstance().playSound("select01");
+                     playSound("select01");
                     sceneValues.remove("selectedWeaponIDUp");
 
                     gdm.money -= weapon.info.price;
@@ -224,7 +225,7 @@ public class WeaponRepairScene extends BaseLogicScene implements IMessageHandler
 
 
             } else {
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 sceneValues.setInt("selectedWeaponIDUp", newSelectedWeaponID);
 
                 WeaponRepairScene weaponRepairScene = new WeaponRepairScene(false);
@@ -250,7 +251,7 @@ public class WeaponRepairScene extends BaseLogicScene implements IMessageHandler
             }
 
             if (priceCount > 0 && priceCount <= gdm.money) {
-                SoundManager.getInstance().playSound("messag01");
+                 playSound("messag01");
                 String str = String.format(StringManager.getInstance().getString("S10001"), priceCount);
                 WeaponRepairScene weaponRepairScene = new WeaponRepairScene(false);
                 weaponRepairScene.setDialogSecne(new Dialg6YesNoDialogScene(str, MSG_SCENE_WEAPON_REPAIR__REPAIR_ALL_DLG_YES, MSG_SCENE_WEAPON_REPAIR__REPAIR_ALL_DLG_NO, this, this));
@@ -259,7 +260,7 @@ public class WeaponRepairScene extends BaseLogicScene implements IMessageHandler
         }
 
         if (msgID == MSG_SCENE_WEAPON_REPAIR__REPAIR_ALL_DLG_YES) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             sceneValues.remove("selectedWeaponIDUp");
             GameDataManager gdm = GameDataManager.getInstance();
 
@@ -282,7 +283,7 @@ public class WeaponRepairScene extends BaseLogicScene implements IMessageHandler
             SceneManager.render(weaponRepairScene);
         }
         if (msgID == MSG_SCENE_WEAPON_REPAIR__REPAIR_ALL_DLG_NO) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             WeaponRepairScene weaponRepairScene = new WeaponRepairScene(false);
             SceneManager.render(weaponRepairScene);
         }
@@ -293,12 +294,12 @@ public class WeaponRepairScene extends BaseLogicScene implements IMessageHandler
             SceneManager.render(weaponRepairScene);
         }
         if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_YES) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             BaseAction act = new GameOverDilogYesAction();
             act.doAction();
         }
         if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_NO) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             BaseAction act = new GameOverDilogNoAction();
             act.doAction();
         }

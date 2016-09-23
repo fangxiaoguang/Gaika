@@ -15,6 +15,8 @@ import com.game.gaika.sprite.DelaySprite;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.game.gaika.sound.SoundManager.playSound;
+
 /**
  * Created by fangxg on 2015/9/1.
  */
@@ -59,7 +61,7 @@ public class BlueRepairNextAction implements BaseAction {
                 toLifeEx = 10;
             }
 
-            SoundManager.getInstance().playSound("messag01");
+             playSound("messag01");
             BattlefieldScene battlefieldScene = new BattlefieldScene(false);
             int needSupply = canRepairWeapon.info.supply * (toLifeEx - fromLifeEx) / 10;
             BlueRepairYesNoDialog blueRepairYesNoDialog = new BlueRepairYesNoDialog(battlefieldScene, canRepairWeapon.id, fromLifeEx, toLifeEx, needSupply);

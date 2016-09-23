@@ -89,38 +89,43 @@ public class SoundManager {
 //		}
     }
 
-    public void playSound(final String key) {
+    public static void playSound(final String key) {
 
-        if (sounds.containsKey(key) == false) {
-            throw new IllegalArgumentException("Illegal src.sound key : " + key);
+        Map<String, Sound> ss =  SoundManager.getInstance().sounds;
+
+        final Sound s = ss.get(key);
+
+        if (ss.containsKey(key) == false) {
+            throw new IllegalArgumentException("Illegal src;sound key : " + key);
         }
 
 
         if (GameSetup.settingOpenSound == true) {
-            handler.postDelayed(new Runnable() {
+            SoundManager.getInstance().handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    sounds.get(key).stop();
+                    s.stop();
 
-                    sounds.get(key).setVolume(GameSetup.settingSoundVolume);
-                    sounds.get(key).play();
+                    s.setVolume(GameSetup.settingSoundVolume);
+                    s.play();
                 }
             }, 0);
         }
     }
 
-    public void stopSound(final String key) {
+    public static void stopSound(final String key) {
+        Map<String, Sound> ss =  SoundManager.getInstance().sounds;
 
-        if (sounds.containsKey(key) == false) {
+        if (ss.containsKey(key) == false) {
             throw new IllegalArgumentException("Illegal src.sound key : " + key);
         }
-
+        final Sound s = ss.get(key);
 
         if (GameSetup.settingOpenSound == true) {
-            handler.postDelayed(new Runnable() {
+            SoundManager.getInstance().handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    sounds.get(key).stop();
+                    s.stop();
                 }
             }, 0);
         }

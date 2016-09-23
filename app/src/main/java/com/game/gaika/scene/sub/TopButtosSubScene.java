@@ -18,6 +18,7 @@ import com.game.gaika.sprite.NormalSprite;
 import static com.game.gaika.data.ID.MSG_ID.*;
 
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/28.
@@ -94,37 +95,37 @@ public class TopButtosSubScene extends BaseLogicScene implements IMessageHandler
 
         ID.MSG_ID EMsgID = pTouchMessage.getMessageID();
         if (EMsgID == MSG_SCENE_TOP_BUTTONS_SUB__BUTTON_SELECT_TARGET) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             SelectTargetScene scene = new SelectTargetScene(true);
             SceneManager.render(scene);
         }
         if (EMsgID == MSG_SCENE_TOP_BUTTONS_SUB__BUTTON_TEAM_BUILD) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             TeamBuildScene scene = new TeamBuildScene(true);
             SceneManager.render(scene);
         }
         if (EMsgID == MSG_SCENE_TOP_BUTTONS_SUB__BUTTON_WEAPON_BUY) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             WeaponBuyScene scene = new WeaponBuyScene(true);
             SceneManager.render(scene);
         }
         if (EMsgID == MSG_SCENE_TOP_BUTTONS_SUB__BUTTON_WEAPON_REPAIR) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             WeaponRepairScene scene = new WeaponRepairScene(true);
             SceneManager.render(scene);
         }
         if (EMsgID == MSG_SCENE_TOP_BUTTONS_SUB__BUTTON_DIPLOMACY) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             DiplomacyScene scene = new DiplomacyScene(true);
             SceneManager.render(scene);
         }
         if (EMsgID == MSG_SCENE_TOP_BUTTONS_SUB__BUTTON_WEAPON_SELL) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             WeaponSellScene scene = new WeaponSellScene(true);
             SceneManager.render(scene);
         }
         if (EMsgID == MSG_SCENE_TOP_BUTTONS_SUB__BUTTON_SYSTEM_MENU) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             BaseLogicScene parentScene = getParentScene();
             parentScene.setDialogSecne(new SystemPopupMenuScene( parentScene, 1.6f));
             SceneManager.render(parentScene);

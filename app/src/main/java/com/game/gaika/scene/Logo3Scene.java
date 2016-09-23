@@ -20,6 +20,7 @@ import java.util.List;
 
 import static com.game.gaika.data.ID.SCENE_ID.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/17.
@@ -118,7 +119,7 @@ public class Logo3Scene extends BaseLogicScene implements IMessageHandler {
     public void onHandlMessage(TouchMessage pTouchMessage) {
 
         if (pTouchMessage.getMessageID() == MSG_SCENE_LOGO_3__DELAY_TIME_OUT || pTouchMessage.getMessageID() == MSG_SCENE_LOGO_3__BACKUP_SCENE_TOUCH) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             BeginMenuSceen beginMenuSceen = new BeginMenuSceen();
             SceneManager.render(beginMenuSceen);
         }

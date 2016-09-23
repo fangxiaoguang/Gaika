@@ -18,6 +18,7 @@ import static com.game.gaika.data.ID.MSG_ID.*;
 
 import static com.game.gaika.data.ID.SCENE_ID.*;
 import static com.game.gaika.data.ID.SCENE_INIT_TYPE.NOT_INIT;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/7/3.
@@ -94,7 +95,7 @@ public class LoadGameScene extends BaseLogicScene implements IMessageHandler {
         Enum msgID = pTouchMessage.getMessageID();
         SceneValueMap sceneValues = getSceneValuesMap();
         if (msgID == MSG_SCENE_LOAD_GAME__PAGE_UP) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
 
             int page = sceneValues.getInt("pageNumber");
             sceneValues.setInt("pageNumber", page - 1);
@@ -104,7 +105,7 @@ public class LoadGameScene extends BaseLogicScene implements IMessageHandler {
             SceneManager.render(scene);
         }
         if (msgID == MSG_SCENE_LOAD_GAME__PAGE_DOWN) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
 
             int page = sceneValues.getInt("pageNumber");
             sceneValues.setInt("pageNumber", page + 1);
@@ -117,7 +118,7 @@ public class LoadGameScene extends BaseLogicScene implements IMessageHandler {
             int saveNo = pTouchMessage.getParam();
             SaveManager.ShowSaveNode save = saves.get(saveNo);
             if (save.saveNo != 0) {
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 SaveManager.load(saveNo);
 
                 BaseLogicScene scene = SceneFactory.createScene(save.preSceneId);
@@ -126,7 +127,7 @@ public class LoadGameScene extends BaseLogicScene implements IMessageHandler {
         }
 
         if (msgID == MSG_SCENE_LOAD_GAME__RETURN) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             BaseLogicScene scene = SceneFactory.createScene(preSceneID, NOT_INIT);
             SceneManager.render(scene);
         }

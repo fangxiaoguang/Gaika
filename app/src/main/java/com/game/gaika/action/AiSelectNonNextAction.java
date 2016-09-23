@@ -18,6 +18,8 @@ import com.game.gaika.sprite.DelaySprite;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.game.gaika.sound.SoundManager.playSound;
+
 /**
  * Created by fangxg on 2015/8/7.
  */
@@ -50,7 +52,7 @@ public class AiSelectNonNextAction implements BaseAction {
             aiWeapon.setStrategic(strategic);
 
             aiWeapon.doSelect();
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             BattlefieldScene battlefieldScene = new BattlefieldScene(false);
 //            battlefieldScene.getLogicCamera().setCente(aiWeapon.getPixelX(), aiWeapon.getPixelY());
             battlefieldScene.getLogicCamera().setCente(strategic.getCameraMapPoont().getPixelX(), strategic.getCameraMapPoont().getPixelY());

@@ -418,9 +418,9 @@ public class BaseWeapon extends IMapPoint {
 
         // ///////////////////////////
         if (this.life <= 0 || pEnempWeapon.life <= 0) {
-//            SoundManager.getInstance().playSound("m_effe01");
+//             playSound("m_effe01");
         } else {
-//            SoundManager.getInstance().playSound("m_effe02");
+//             playSound("m_effe02");
         }
 
         gdm.effectNodes = new ArrayList<>();

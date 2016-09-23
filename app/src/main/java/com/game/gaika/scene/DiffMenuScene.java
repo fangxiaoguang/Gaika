@@ -10,6 +10,7 @@ import com.game.gaika.sprite.NormalSprite;
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.GAME_DIFF.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/18.
@@ -50,7 +51,7 @@ public class DiffMenuScene extends BaseLogicScene implements IMessageHandler {
         if (pTouchMessage.getMessageID() == MSG_SCENE_DIFF_MENU__BUTTON_EASE
                 || pTouchMessage.getMessageID() == MSG_SCENE_DIFF_MENU__BUTTON_HARD
                 || pTouchMessage.getMessageID() == MSG_SCENE_DIFF_MENU__BUTTON_VERY_HARD) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             if (pTouchMessage.getMessageID() == MSG_SCENE_DIFF_MENU__BUTTON_EASE) {
                 gdm.gameBeginDiff = HARD;
             }
@@ -65,7 +66,7 @@ public class DiffMenuScene extends BaseLogicScene implements IMessageHandler {
             SceneManager.render(beginLocalScene);
         }
         if (pTouchMessage.getMessageID() == MSG_SCENE_DIFF_MENU__BUTTON_BACK) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             BeginMenuSceen beginMenuSceen = new BeginMenuSceen();
             SceneManager.render(beginMenuSceen);
         }

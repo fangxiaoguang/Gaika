@@ -11,6 +11,8 @@ import com.game.gaika.scene.dialg.LvUpDialogScene;
 import com.game.gaika.sound.SoundManager;
 import com.game.gaika.sprite.DelaySprite;
 
+import static com.game.gaika.sound.SoundManager.playSound;
+
 /**
  * Created by fangxg on 2015/8/7.
  */
@@ -25,7 +27,7 @@ public class AiFightTimeOutAction implements BaseAction {
         BaseWeapon weapon = gdm.weapons.get(aiWeaponID);
 
         if (weapon.getLv() > weapon.getPreLv()) {
-            SoundManager.getInstance().playSound("levelup");
+            playSound("levelup");
             BattlefieldScene battlefieldScene = new BattlefieldScene(false);
             battlefieldScene.setDialogSecne(new LvUpDialogScene(aiWeaponID, battlefieldScene));
             SceneManager.render(battlefieldScene);

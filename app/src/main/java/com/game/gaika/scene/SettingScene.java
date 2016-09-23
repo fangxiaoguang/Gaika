@@ -18,6 +18,7 @@ import java.util.NoSuchElementException;
 
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/7/3.
@@ -144,7 +145,7 @@ public class SettingScene extends BaseLogicScene implements IMessageHandler {
 
 
         if(msgID == MSG_SCENE_SETTING_ZOOM_DOWN){
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
 
             GameSetup.settingBattlefieldZoom = ((float)((int)(GameSetup.settingBattlefieldZoom * 10) - 1)) / 10.0f;
             if(GameSetup.settingBattlefieldZoom < GameSetup.SETTING_BATTLEFIELD_ZOOM_MIN){
@@ -155,7 +156,7 @@ public class SettingScene extends BaseLogicScene implements IMessageHandler {
         }
 
         if(msgID == MSG_SCENE_SETTING_ZOOM_UP){
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
 
             GameSetup.settingBattlefieldZoom = ((float)((int)(GameSetup.settingBattlefieldZoom * 10) + 1)) / 10.0f;
             if(GameSetup.settingBattlefieldZoom > GameSetup.SETTING_BATTLEFIELD_ZOOM_MAX){
@@ -167,14 +168,14 @@ public class SettingScene extends BaseLogicScene implements IMessageHandler {
 
         if(msgID == MSG_SCENE_SETTING_SOUND_OFF){
             GameSetup.settingOpenSound = false;
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
 
             BaseLogicScene scene = new SettingScene(false, preSceneID);
             SceneManager.render(scene);
         }
         if(msgID == MSG_SCENE_SETTING_SOUND_ON){
             GameSetup.settingOpenSound = true;
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
 
             BaseLogicScene scene = new SettingScene(false, preSceneID);
             SceneManager.render(scene);
@@ -182,7 +183,7 @@ public class SettingScene extends BaseLogicScene implements IMessageHandler {
 
 
         if(msgID == MSG_SCENE_SETTING_VOLUME_DOWN){
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
 
             GameSetup.settingSoundVolume = ((float)((int)(GameSetup.settingSoundVolume * 100) - 10)) / 100.0f;
             if(GameSetup.settingSoundVolume < 0){
@@ -195,7 +196,7 @@ public class SettingScene extends BaseLogicScene implements IMessageHandler {
         }
 
         if(msgID == MSG_SCENE_SETTING_VOLUME_UP){
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
 
             GameSetup.settingSoundVolume = ((float)((int)(GameSetup.settingSoundVolume * 100) + 10)) / 100.0f;
             if(GameSetup.settingSoundVolume > 1.0f){
@@ -207,7 +208,7 @@ public class SettingScene extends BaseLogicScene implements IMessageHandler {
 
         }
         if (msgID == MSG_SCENE_SETTING_RETURN) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
 
             SaveManager.saveConfig();
 

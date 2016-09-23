@@ -19,6 +19,7 @@ import com.game.gaika.sprite.NormalSprite;
 
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/22.
@@ -114,23 +115,23 @@ public class SystemPopupMenuScene extends DialogScene {   // DialogScene {
     public void onHandlMessage(TouchMessage pTouchMessage) {
         ID.MSG_ID msgID = pTouchMessage.getMessageID();
         if (msgID == MSG_SCENE_SYSTEM_POPUP_MENU__BUTTON_1) {
-            SoundManager.getInstance().playSound("messag01");
+             playSound("messag01");
             TurnFinishAction act = new TurnFinishAction();
             act.doAction();
         }
         if (msgID == MSG_SCENE_SYSTEM_POPUP_MENU__BUTTON_2) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             BattlefieldInfoAction act = new BattlefieldInfoAction();
             act.doAction();
         }
         if (msgID == MSG_SCENE_SYSTEM_POPUP_MENU__BUTTON_3) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             TeamListAction act = new TeamListAction();
             act.doAction();
         }
 
         if (msgID == MSG_SCENE_SYSTEM_POPUP_MENU__BUTTON_4) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             String oldPath = GameSetup.sdcartdPahtSave + "xiao.png";
             SceneManager.getTopBaseLogicScene().captureScene(oldPath, this);
         }
@@ -140,23 +141,23 @@ public class SystemPopupMenuScene extends DialogScene {   // DialogScene {
         }
 
         if (msgID == MSG_SCENE_SYSTEM_POPUP_MENU__BUTTON_5) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             DataLoadAction act = new DataLoadAction();
             act.doAction();
         }
 
         if (msgID == MSG_SCENE_SYSTEM_POPUP_MENU__BUTTON_6) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             SettingAction act = new SettingAction();
             act.doAction();
         }
         if (msgID == MSG_SCENE_SYSTEM_POPUP_MENU__BUTTON_7) {
-            SoundManager.getInstance().playSound("messag01");
+             playSound("messag01");
             GameOverAction act = new GameOverAction();
             act.doAction();
         }
         if (msgID == MSG_SCENE_SYSTEM_POPUP_MENU__BUTTON_8) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             ReturnAction act = new ReturnAction();
             act.doAction();
         }

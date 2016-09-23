@@ -10,6 +10,7 @@ import com.game.gaika.sprite.NormalSprite;
 
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/18.
@@ -46,22 +47,22 @@ public class BeginMenuSceen extends BaseLogicScene implements IMessageHandler {
     @Override
     public void onHandlMessage(TouchMessage pTouchMessage) {
         if (pTouchMessage.getMessageID() == MSG_SCENE_BEGIN_MENU__BUTTON_NEW_GAME) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             DiffMenuScene scene = new DiffMenuScene();
             SceneManager.render(scene);
         }
         if (pTouchMessage.getMessageID() == MSG_SCENE_BEGIN_MENU__BUTTON_LOAD_GAME) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             LoadGameScene scene = new LoadGameScene(true, BEGIN_MENU);
             SceneManager.render(scene);
         }
         if (pTouchMessage.getMessageID() == MSG_SCENE_BEGIN_MENU__BUTTON_SETTING) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             SettingScene scene = new SettingScene(true,BEGIN_MENU);
             SceneManager.render(scene);
         }
         if (pTouchMessage.getMessageID() == MSG_SCENE_BEGIN_MENU__BUTTON_BACK_GAME) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             MainActivity.mGameActiviy.finish();
         }
     }

@@ -32,6 +32,7 @@ import static com.game.gaika.data.ID.COUNTRY.JAPAN;
 import static com.game.gaika.data.ID.MSG_ID.*;
 
 import  static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/7/1.
@@ -279,42 +280,42 @@ public class DiplomacyScene extends BaseLogicScene implements IMessageHandler {
         Enum msgID = pTouchMessage.getMessageID();
         SceneValueMap sceneValues =  getSceneValuesMap();
         if (msgID == MSG_SCENE_DIPLOMACY__SELECT_COUNTRY_1) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             sceneValues.setEnum("selectedCounty", USA);
             sceneValues.setInt("selectedDiplomacyLv", gdm.getDiplomacy(USA));
             DiplomacyScene scene = new DiplomacyScene(false);
             SceneManager.render(scene);
         }
         if (msgID == MSG_SCENE_DIPLOMACY__SELECT_COUNTRY_2) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             sceneValues.setEnum("selectedCounty", USN);
             sceneValues.setInt("selectedDiplomacyLv", gdm.getDiplomacy(USN));
             DiplomacyScene scene = new DiplomacyScene(false);
             SceneManager.render(scene);
         }
         if (msgID == MSG_SCENE_DIPLOMACY__SELECT_COUNTRY_3) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             sceneValues.setEnum("selectedCounty", RUSSIA);
             sceneValues.setInt("selectedDiplomacyLv", gdm.getDiplomacy(RUSSIA));
             DiplomacyScene scene = new DiplomacyScene(false);
             SceneManager.render(scene);
         }
         if (msgID == MSG_SCENE_DIPLOMACY__SELECT_COUNTRY_4) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             sceneValues.setEnum("selectedCounty", GERMANY);
             sceneValues.setInt("selectedDiplomacyLv", gdm.getDiplomacy(GERMANY));
             DiplomacyScene scene = new DiplomacyScene(false);
             SceneManager.render(scene);
         }
         if (msgID == MSG_SCENE_DIPLOMACY__SELECT_COUNTRY_5) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             sceneValues.setEnum("selectedCounty", ENGLAND);
             sceneValues.setInt("selectedDiplomacyLv", gdm.getDiplomacy(ENGLAND));
             DiplomacyScene scene = new DiplomacyScene(false);
             SceneManager.render(scene);
         }
         if (msgID == MSG_SCENE_DIPLOMACY__SELECT_COUNTRY_6) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             sceneValues.setEnum("selectedCounty", JAPAN);
             sceneValues.setInt("selectedDiplomacyLv", gdm.getDiplomacy(JAPAN));
             DiplomacyScene scene = new DiplomacyScene(false);
@@ -322,7 +323,7 @@ public class DiplomacyScene extends BaseLogicScene implements IMessageHandler {
         }
 
         if (msgID == MSG_SCENE_DIPLOMACY__LEFT) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             int lv = sceneValues.getInt("selectedDiplomacyLv");
 
             if (lv > gdm.getDiplomacy((ID.COUNTRY)sceneValues.getEnum("selectedCounty"))) {
@@ -332,7 +333,7 @@ public class DiplomacyScene extends BaseLogicScene implements IMessageHandler {
             }
         }
         if (msgID == MSG_SCENE_DIPLOMACY__RIGHT) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             //int lv = sceneValues.getInt("selectedDiplomacyLv");
             ID.COUNTRY selectedCountry = (ID.COUNTRY)sceneValues.getEnum("selectedCounty");
             int nowLv = gdm.getDiplomacy(selectedCountry);
@@ -360,7 +361,7 @@ public class DiplomacyScene extends BaseLogicScene implements IMessageHandler {
             }
 
             if(diploacyAllMoney <= gdm.money){
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 gdm.money -= diploacyAllMoney;
 
                 gdm.setDiplomacy(selectedCountry, endLv);
@@ -378,19 +379,19 @@ public class DiplomacyScene extends BaseLogicScene implements IMessageHandler {
             }
         }
         if(msgID == MSG_SCENE_DIPLOMACY__CAN_BUY_WEAPON_NEXT){
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
             List<Integer> infoIDs = (List<Integer>)(sceneValues.getObject("newWeaponInfoIds"));
             infoIDs.remove(0);
             DiplomacyScene scene = new DiplomacyScene(false);
             SceneManager.render(scene);
         }
         if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_YES) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             BaseAction act = new GameOverDilogYesAction();
             act.doAction();
         }
         if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_NO) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             BaseAction act = new GameOverDilogNoAction();
             act.doAction();
         }

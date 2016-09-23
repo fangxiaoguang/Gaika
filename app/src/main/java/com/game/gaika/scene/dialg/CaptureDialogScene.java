@@ -29,7 +29,7 @@ public class CaptureDialogScene extends DialogScene {
 
         City city = gdm.getCurrentChapter().getGameMap().citys.get(weapon.x * 100 + weapon.y);
 
-//            SoundManager.getInstance().playSound("messag01");
+//             playSound("messag01");
 
             NormalSprite bkSprite = new NormalSprite(0.0f, 0.0f, "dialg3");
             addSprite(bkSprite);

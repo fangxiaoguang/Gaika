@@ -15,6 +15,7 @@ import static com.game.gaika.data.ID.COUNTRY.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
 
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/23.
@@ -71,7 +72,7 @@ public class FlagsSubScene extends BaseLogicScene implements IMessageHandler {
         Enum msgID = pTouchMessage.getMessageID();
         Set<Enum> filterSet = (Set<Enum>) getParentScene().getSceneValuesMap().getObject("countryFilter" + subTag);
         if (msgID == MSG_SCENE_FLAGS_SUB__BUTTON_FLAG_1) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             if (filterSet.contains(USA) == true) {
                 filterSet.remove(USA);
             } else {
@@ -79,7 +80,7 @@ public class FlagsSubScene extends BaseLogicScene implements IMessageHandler {
             }
         }
         if (msgID == MSG_SCENE_FLAGS_SUB__BUTTON_FLAG_2) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             if (filterSet.contains(USN) == true) {
                 filterSet.remove(USN);
             } else {
@@ -87,7 +88,7 @@ public class FlagsSubScene extends BaseLogicScene implements IMessageHandler {
             }
         }
         if (msgID == MSG_SCENE_FLAGS_SUB__BUTTON_FLAG_3) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             if (filterSet.contains(RUSSIA) == true) {
                 filterSet.remove(RUSSIA);
             } else {
@@ -95,7 +96,7 @@ public class FlagsSubScene extends BaseLogicScene implements IMessageHandler {
             }
         }
         if (msgID == MSG_SCENE_FLAGS_SUB__BUTTON_FLAG_4) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             if (filterSet.contains(GERMANY) == true) {
                 filterSet.remove(GERMANY);
             } else {
@@ -103,7 +104,7 @@ public class FlagsSubScene extends BaseLogicScene implements IMessageHandler {
             }
         }
         if (msgID == MSG_SCENE_FLAGS_SUB__BUTTON_FLAG_5) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             if (filterSet.contains(ENGLAND) == true) {
                 filterSet.remove(ENGLAND);
             } else {
@@ -111,7 +112,7 @@ public class FlagsSubScene extends BaseLogicScene implements IMessageHandler {
             }
         }
         if (msgID == MSG_SCENE_FLAGS_SUB__BUTTON_FLAG_6) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             if (filterSet.contains(JAPAN) == true) {
                 filterSet.remove(JAPAN);
             } else {
@@ -119,7 +120,7 @@ public class FlagsSubScene extends BaseLogicScene implements IMessageHandler {
             }
         }
         if (msgID == MSG_SCENE_FLAGS_SUB__BUTTON_FLAG_7) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             if (filterSet.contains(ALL) == true) {
                 filterSet.remove(ALL);
             } else {

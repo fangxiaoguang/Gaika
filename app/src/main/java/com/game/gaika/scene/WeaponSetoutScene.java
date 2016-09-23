@@ -33,6 +33,7 @@ import static com.game.gaika.data.ID.TEAM_COLOR.*;
 import static com.game.gaika.scene.WeaponSetoutScene.StateID.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/23.
@@ -171,7 +172,7 @@ public class WeaponSetoutScene extends BaseLogicScene implements IMessageHandler
         SceneValueMap sceneValues = getSceneValuesMap();
         ID.MSG_ID msgID = pTouchMessage.getMessageID();
         if (msgID == MSG_SCENE_WEAPON_SETOUT__BUTTON_BACK) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             BattlefieldScene battlefieldScene = new BattlefieldScene(false);
             SceneManager.render(battlefieldScene);
         }
@@ -186,7 +187,7 @@ public class WeaponSetoutScene extends BaseLogicScene implements IMessageHandler
 
                     gdm.addSupply(BLUE, -weapon.info.supply);
                     weapon.doSetOut(cityNode);
-                    SoundManager.getInstance().playSound("haichi01");
+                     playSound("haichi01");
                     BattlefieldScene battlefieldScene = new BattlefieldScene(false);
                     SceneManager.render(battlefieldScene);
                 } else {
@@ -194,7 +195,7 @@ public class WeaponSetoutScene extends BaseLogicScene implements IMessageHandler
                 }
 
             } else {
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 sceneValues.setInt("selectedWeaponID", newSelectedWeaponID);
                 WeaponSetoutScene WeaponSetoutScene = new WeaponSetoutScene();
                 SceneManager.render(WeaponSetoutScene);

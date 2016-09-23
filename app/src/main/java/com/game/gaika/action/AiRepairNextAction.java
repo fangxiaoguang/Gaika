@@ -15,6 +15,8 @@ import com.game.gaika.sprite.DelaySprite;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.game.gaika.sound.SoundManager.playSound;
+
 /**
  * Created by fangxg on 2015/7/29.
  */
@@ -61,7 +63,7 @@ public class AiRepairNextAction implements BaseAction {
                 toLifeEx = 10;
             }
 
-            SoundManager.getInstance().playSound("messag01");
+             playSound("messag01");
             BattlefieldScene battlefieldScene = new BattlefieldScene(false);
             AiRepairNextDialog aiRepairNextDialog = new AiRepairNextDialog(battlefieldScene, canRepairWeapon.id);
             battlefieldScene.setDialogSecne(aiRepairNextDialog);

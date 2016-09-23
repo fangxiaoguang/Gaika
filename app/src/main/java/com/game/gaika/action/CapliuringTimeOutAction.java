@@ -13,6 +13,8 @@ import com.game.gaika.scene.dialg.GetSomeThingScene;
 import com.game.gaika.sound.SoundManager;
 import com.game.gaika.sprite.DelaySprite;
 
+import static com.game.gaika.sound.SoundManager.playSound;
+
 /**
  * Created by fangxg on 2015/7/26.
  */
@@ -31,7 +33,7 @@ public class CapliuringTimeOutAction implements BaseAction {
         City city = gdm.getCurrentChapter().getGameMap().citys.get(weapon.x * 100 + weapon.y);
 
         if (city != null && (city.getWeaponInfoId != -1 || city.getMoney != 0 || city.getSupply != 0)) {
-            SoundManager.getInstance().playSound("messag01");
+             playSound("messag01");
             BattlefieldScene battlefieldScene = new BattlefieldScene(false);
             battlefieldScene.setDialogSecne(new GetSomeThingScene(weaponID, battlefieldScene));
             SceneManager.render(battlefieldScene);

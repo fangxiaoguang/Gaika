@@ -31,6 +31,7 @@ import static com.game.gaika.data.ID.TEAM_COLOR.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
 
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/28.
@@ -233,13 +234,13 @@ public class TeamBuildScene extends BaseLogicScene implements IMessageHandler {
         SceneValueMap sceneValues = getSceneValuesMap();
         ID.MSG_ID msgID = pTouchMessage.getMessageID();
         if (msgID == MSG_SCENE_TEAM_BUILD__DOWN_LEFT) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
             sceneValues.setInt("pageDown", sceneValues.getInt("pageDown") - 1);
             TeamBuildScene teamBuildScene = new TeamBuildScene(false);
             SceneManager.render(teamBuildScene);
         }
         if (msgID == MSG_SCENE_TEAM_BUILD__DOWN_RIGHT) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
             sceneValues.setInt("pageDown", sceneValues.getInt("pageDown") + 1);
             TeamBuildScene teamBuildScene = new TeamBuildScene(false);
             SceneManager.render(teamBuildScene);
@@ -249,14 +250,14 @@ public class TeamBuildScene extends BaseLogicScene implements IMessageHandler {
             GameDataManager gdm = GameDataManager.getInstance();
             sceneValues.remove("selectedWeaponIDDown");
             if (sceneValues.containsKey("selectedWeaponIDUp") == true && sceneValues.getInt("selectedWeaponIDUp") == newSelectedWeaponID) {
-                SoundManager.getInstance().playSound("haichi01");
+                 playSound("haichi01");
                 sceneValues.remove("selectedWeaponIDUp");
                 BaseWeapon weapon = gdm.weapons.get(newSelectedWeaponID);
                 weapon.teamOut = false;
                 TeamBuildScene teamBuildScene = new TeamBuildScene(false);
                 SceneManager.render(teamBuildScene);
             } else {
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 sceneValues.setInt("selectedWeaponIDUp", newSelectedWeaponID);
 
                 TeamBuildScene teamBuildScene = new TeamBuildScene(false);
@@ -285,7 +286,7 @@ public class TeamBuildScene extends BaseLogicScene implements IMessageHandler {
                     filter.setCountrys(countryFilter);
                     List<BaseWeapon> teamOutWeapons = gdm.getWeapons(filter);
                     if (teamOutWeapons.size() < 40) {
-                        SoundManager.getInstance().playSound("haichi01");
+                         playSound("haichi01");
                         sceneValues.remove("selectedWeaponIDDown");
                         weapon.teamOut = true;
                         TeamBuildScene teamBuildScene = new TeamBuildScene(false);
@@ -295,7 +296,7 @@ public class TeamBuildScene extends BaseLogicScene implements IMessageHandler {
 
                 }
             } else {
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 sceneValues.setInt("selectedWeaponIDDown", newSelectedWeaponID);
                 TeamBuildScene teamBuildScene = new TeamBuildScene(false);
                 SceneManager.render(teamBuildScene);
@@ -309,12 +310,12 @@ public class TeamBuildScene extends BaseLogicScene implements IMessageHandler {
             SceneManager.render(teamBuildScene);
         }
         if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_YES) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             BaseAction act = new GameOverDilogYesAction();
             act.doAction();
         }
         if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_NO) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             BaseAction act = new GameOverDilogNoAction();
             act.doAction();
         }

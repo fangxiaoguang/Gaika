@@ -34,6 +34,7 @@ import static com.game.gaika.data.ID.STOR_TYPE.*;
 import static com.game.gaika.data.ID.TEAM_COLOR.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/29.
@@ -267,25 +268,25 @@ public class WeaponBuyScene extends BaseLogicScene implements IMessageHandler {
         SceneValueMap sceneValues = getSceneValuesMap();
         ID.MSG_ID msgID = pTouchMessage.getMessageID();
         if (msgID == MSG_SCENE_WEAPON_BUY__UP_LEFT) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
             sceneValues.setInt("pageUp", sceneValues.getInt("pageUp") - 1);
             WeaponBuyScene weaponBuyScene = new WeaponBuyScene(false);
             SceneManager.render(weaponBuyScene);
         }
         if (msgID == MSG_SCENE_WEAPON_BUY__UP_RIGHT) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
             sceneValues.setInt("pageUp", sceneValues.getInt("pageUp") + 1);
             WeaponBuyScene weaponBuyScene = new WeaponBuyScene(false);
             SceneManager.render(weaponBuyScene);
         }
         if (msgID == MSG_SCENE_WEAPON_BUY__DOWN_LEFT) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
             sceneValues.setInt("pageDown", sceneValues.getInt("pageDown") - 1);
             WeaponBuyScene weaponBuyScene = new WeaponBuyScene(false);
             SceneManager.render(weaponBuyScene);
         }
         if (msgID == MSG_SCENE_WEAPON_BUY__DOWN_RIGHT) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
             sceneValues.setInt("pageDown", sceneValues.getInt("pageDown") + 1);
             WeaponBuyScene weaponBuyScene = new WeaponBuyScene(false);
             SceneManager.render(weaponBuyScene);
@@ -298,7 +299,7 @@ public class WeaponBuyScene extends BaseLogicScene implements IMessageHandler {
                 WeaponInfo info = gdm.weapInfos.get(newSelectedWeaponInfoID);
                 if (info.price <= gdm.money) {
 
-                    SoundManager.getInstance().playSound("haichi01");
+                     playSound("haichi01");
                     sceneValues.remove("selectedWeaponIDUp");
 
                     gdm.money -= info.price;
@@ -313,7 +314,7 @@ public class WeaponBuyScene extends BaseLogicScene implements IMessageHandler {
 
 
             } else {
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 sceneValues.setInt("selectedWeaponIDUp", newSelectedWeaponInfoID);
 
                 WeaponBuyScene weaponBuyScene = new WeaponBuyScene(false);
@@ -326,7 +327,7 @@ public class WeaponBuyScene extends BaseLogicScene implements IMessageHandler {
             if (sceneValues.containsKey("selectedWeaponIDDown") == true && sceneValues.getInt("selectedWeaponIDDown") == newSelectedWeaponID) {
 
             } else {
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 sceneValues.remove("selectedWeaponIDUp");
                 sceneValues.remove("selectedWeaponIDDown");
                 sceneValues.setInt("selectedWeaponIDDown", newSelectedWeaponID);
@@ -343,12 +344,12 @@ public class WeaponBuyScene extends BaseLogicScene implements IMessageHandler {
             SceneManager.render(weaponBuyScene);
         }
         if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_YES) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             BaseAction act = new GameOverDilogYesAction();
             act.doAction();
         }
         if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_NO) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             BaseAction act = new GameOverDilogNoAction();
             act.doAction();
         }

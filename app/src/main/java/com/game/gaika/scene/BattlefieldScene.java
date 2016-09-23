@@ -89,6 +89,7 @@ import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
 
 import static com.game.gaika.scene.BattlefieldScene.StateID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 
 /**
@@ -255,7 +256,7 @@ public class BattlefieldScene extends BaseLogicScene implements IOnSceneTouchLis
         //draw Effect
         for (EffectNode effectNode : gdm.effectNodes) {
             if (effectNode.id.equals(EffectNode.EEffectID.EFFECT_ID_MARKER04)) {
-                SoundManager.getInstance().playSound("m_effe01");
+                 playSound("m_effe01");
                 EffectSprite effectSprite = new EffectSprite(effectNode);
                 effectSprite.setZ(Z_INDEX_5);
                 addSprite(effectSprite);
@@ -409,19 +410,19 @@ public class BattlefieldScene extends BaseLogicScene implements IOnSceneTouchLis
             }
 
             if (msgID == MSG_SCENE_BATTLEFIELD__SELECT_WEAPON) {
-                SoundManager.getInstance().playSound("unit01a");
+                 playSound("unit01a");
                 int weaponID = pTouchMessage.getParam();
                 BaseAction act = new SelectBuleWeaponAction(weaponID);
                 act.doAction();
             }
             if (msgID == MSG_SCENE_BATTLEFIELD__SELECT_JUST_INFO_WEAPON) {
-                SoundManager.getInstance().playSound("unit01a");
+                 playSound("unit01a");
                 int weaponID = pTouchMessage.getParam();
                 BaseAction act = new SelectJustInfoWeaponAction(weaponID);
                 act.doAction();
             }
             if (msgID == MSG_SCENE_BATTLEFIELD__SELECT_CHOOSE_ARMS_WEAPON) {
-                SoundManager.getInstance().playSound("unit01a");
+                 playSound("unit01a");
                 int weaponID = pTouchMessage.getParam();
                 BaseAction act = new SelectChooseArmsWeaponAction(weaponID);
                 act.doAction();
@@ -437,7 +438,7 @@ public class BattlefieldScene extends BaseLogicScene implements IOnSceneTouchLis
                 act.doAction();
             }
             if (msgID == MSG_SCENE_BATTLEFIELD__SELECT_TRANSPORTER) {
-                SoundManager.getInstance().playSound("unit01a");
+                 playSound("unit01a");
                 int transporterID = pTouchMessage.getParam();
                 BaseAction act = new SelectTransporterOutAction(transporterID);
                 act.doAction();
@@ -448,7 +449,7 @@ public class BattlefieldScene extends BaseLogicScene implements IOnSceneTouchLis
                 act.doAction();
             }
             if (msgID == MSG_SCENE_HUD__TURN_FINISH) {
-                SoundManager.getInstance().playSound("messag01");
+                 playSound("messag01");
                 BaseAction act = new TurnFinishAction();
                 act.doAction();
             }
@@ -456,27 +457,27 @@ public class BattlefieldScene extends BaseLogicScene implements IOnSceneTouchLis
                 if (GameSetup.isDebug_trackingUserProcess == true) {
                     DebugManager.debugSave();
                 }
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 BaseAction act = new TurnFinishDilogYesAction();
                 act.doAction();
             }
             if (msgID == MSG_SCENE_HUD__TURN_FINISH_DILOG_NO) {
-                SoundManager.getInstance().playSound("back01");
+                 playSound("back01");
                 BaseAction act = new TurnFinishDilogNoAction();
                 act.doAction();
             }
             if (msgID == MSG_SCENE_HUD__BUTTON_SYSTEM) {
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 BaseAction act = new ButtonSystemAction();
                 act.doAction();
             }
             if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_YES) {
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 BaseAction act = new GameOverDilogYesAction();
                 act.doAction();
             }
             if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_NO) {
-                SoundManager.getInstance().playSound("back01");
+                 playSound("back01");
                 BaseAction act = new GameOverDilogNoAction();
                 act.doAction();
             }
@@ -484,23 +485,23 @@ public class BattlefieldScene extends BaseLogicScene implements IOnSceneTouchLis
 
         if (oldState == STATE_ID_SELECTED_WEAPON) {
             if (msgID == MSG_SCENE_HUD__BUTTON_BACKUP) {
-                SoundManager.getInstance().playSound("back01");
+                 playSound("back01");
                 BaseAction act = new BackBtnToNoneAction();
                 act.doAction();
             }
 
             if (msgID == MSG_SCENE_BATTLEFIELD__SELECT_SELF) {
-                SoundManager.getInstance().playSound("messag01");
+                 playSound("messag01");
                 BaseAction act = new SelectBuleSelfAction();
                 act.doAction();
             }
             if (msgID == MSG_SCENE_BATTLEFIELD__SELECT_SELF_DLG_YES) {
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 BaseAction act = new SelectBuleSelfDilogYes();
                 act.doAction();
             }
             if (msgID == MSG_SCENE_BATTLEFIELD__SELECT_SELF_DLG_NO) {
-                SoundManager.getInstance().playSound("back01");
+                 playSound("back01");
                 BaseAction act = new SelectBuleSelfDilogNo();
                 act.doAction();
             }
@@ -526,23 +527,23 @@ public class BattlefieldScene extends BaseLogicScene implements IOnSceneTouchLis
         }
         if (oldState == STATE_ID_MOVE_TO_DESC) {
             if (msgID == MSG_SCENE_HUD__BUTTON_BACKUP) {
-                SoundManager.getInstance().playSound("back01");
+                 playSound("back01");
                 BaseAction act = new BackBtnToSelectedAction();
                 act.doAction();
             }
 
             if (msgID == MSG_SCENE_BATTLEFIELD__SELECT_SELF) {
-                SoundManager.getInstance().playSound("messag01");
+                 playSound("messag01");
                 BaseAction act = new SelectBuleSelfAction();
                 act.doAction();
             }
             if (msgID == MSG_SCENE_BATTLEFIELD__SELECT_SELF_DLG_YES) {
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 BaseAction act = new SelectBuleSelfDilogYes();
                 act.doAction();
             }
             if (msgID == MSG_SCENE_BATTLEFIELD__SELECT_SELF_DLG_NO) {
-                SoundManager.getInstance().playSound("back01");
+                 playSound("back01");
                 BaseAction act = new SelectBuleSelfDilogNo();
                 act.doAction();
             }
@@ -708,14 +709,14 @@ public class BattlefieldScene extends BaseLogicScene implements IOnSceneTouchLis
             }
             if (msgID == MSG_SCENE_BATTLEFIELD__BLUE_REPAIR_YES) {
                 //修理，然后打mark， next
-                SoundManager.getInstance().playSound("select01");
+                 playSound("select01");
                 int weaponID = pTouchMessage.getParam();
                 BaseAction act = new BlueRepairYesAction(weaponID);
                 act.doAction();
             }
             if (msgID == MSG_SCENE_BATTLEFIELD__BLUE_REPAIR_NO) {
                 //不修理，然后打mark， next
-                SoundManager.getInstance().playSound("back01");
+                 playSound("back01");
                 BaseAction act = new BlueRepairNoAction();
                 act.doAction();
             }

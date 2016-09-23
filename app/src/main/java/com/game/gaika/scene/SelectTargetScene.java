@@ -24,6 +24,7 @@ import java.util.List;
 import static com.game.gaika.data.ID.COUNTRY.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/7/1.
@@ -168,7 +169,7 @@ public class SelectTargetScene extends BaseLogicScene implements IMessageHandler
         Enum msgID = pTouchMessage.getMessageID();
         SceneValueMap sceneValues = getSceneValuesMap();
         if (msgID == MSG_SCENE_SELECT_TARGET__SELECT_CHAPTER) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             int newSelectedChapterID = pTouchMessage.getParam();
             if (sceneValues.containsKey("selectedChapterID") == false) {
                 sceneValues.setInt("selectedChapterID", newSelectedChapterID);
@@ -192,12 +193,12 @@ public class SelectTargetScene extends BaseLogicScene implements IMessageHandler
 
         }
         if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_YES) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             BaseAction act = new GameOverDilogYesAction();
             act.doAction();
         }
         if (msgID == MSG_SCENE_HUD__GAME_OVER_DILOG_NO) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             BaseAction act = new GameOverDilogNoAction();
             act.doAction();
         }

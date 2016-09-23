@@ -16,6 +16,7 @@ import java.util.List;
 import static com.game.gaika.scene.TutorialScene.InitID.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/20.
@@ -88,7 +89,7 @@ public class TutorialScene extends BaseLogicScene implements IMessageHandler {
     public void onHandlMessage(TouchMessage pTouchMessage) {
         ID.MSG_ID EMsgID = pTouchMessage.getMessageID();
         if (EMsgID == MSG_SCENE_TUTORIAL__BACKUP_TOUCHE) {
-            SoundManager.getInstance().playSound("scrl01");
+             playSound("scrl01");
             if(imageList.size() > 0) {
                 imageList.remove(0);
             }

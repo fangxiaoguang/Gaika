@@ -20,6 +20,7 @@ import static com.game.gaika.scene.BeginLocalScene.StateID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
 
 import static com.game.gaika.data.ID.COUNTRY.*;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/18.
@@ -114,7 +115,7 @@ public class BeginLocalScene extends BaseLogicScene implements IMessageHandler, 
         if (msgID == MSG_SCENE_BEGIN_LOCAL__BUTTON_SELECT_LOCAL_1 || msgID == MSG_SCENE_BEGIN_LOCAL__BUTTON_SELECT_LOCAL_2
                 || msgID == MSG_SCENE_BEGIN_LOCAL__BUTTON_SELECT_LOCAL_3 || msgID == MSG_SCENE_BEGIN_LOCAL__BUTTON_SELECT_LOCAL_4
                 || msgID == MSG_SCENE_BEGIN_LOCAL__BUTTON_SELECT_LOCAL_5 || msgID == MSG_SCENE_BEGIN_LOCAL__BUTTON_SELECT_LOCAL_6) {
-            SoundManager.getInstance().playSound("select01");
+             playSound("select01");
             if(msgID == MSG_SCENE_BEGIN_LOCAL__BUTTON_SELECT_LOCAL_1){
                 gdm.gameBeginLocal = USN;
             }
@@ -140,7 +141,7 @@ public class BeginLocalScene extends BaseLogicScene implements IMessageHandler, 
             onStateChanged(oldState, newState, pTouchMessage);
         }
         if (msgID == MSG_SCENE_BEGIN_LOCAL__BUTTON_BACK) {
-            SoundManager.getInstance().playSound("back01");
+             playSound("back01");
             DiffMenuScene diffMenuScene = new DiffMenuScene();
             SceneManager.render(diffMenuScene);
         }

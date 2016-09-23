@@ -14,6 +14,9 @@ import com.game.gaika.texture.TexRegionManager;
 
 import java.util.List;
 
+import static com.game.gaika.sound.SoundManager.playSound;
+import static com.game.gaika.sound.SoundManager.stopSound;
+
 
 /**
  * Created by fangxg on 2015/7/27.
@@ -95,7 +98,7 @@ public class ChapterCompleteScene extends BaseLogicScene {
         NormalSprite buttonSprite =new NormalSprite(553, 499, "resu_bt1", 1, new TouchMessage(ID.MSG_ID.MSG_SCENE_CHAPTER_COMPLETE__BACK, null, this));
         addSprite(buttonSprite);
 
-        SoundManager.getInstance().playSound("gameover");
+         playSound("gameover");
     }
 
     @Override
@@ -114,8 +117,8 @@ public class ChapterCompleteScene extends BaseLogicScene {
         ID.MSG_ID msgID = pTouchMessage.getMessageID();
 
         if(msgID == ID.MSG_ID.MSG_SCENE_CHAPTER_COMPLETE__BACK){
-            SoundManager.getInstance().stopSound("gameover");
-            SoundManager.getInstance().playSound("back01");
+             stopSound("gameover");
+             playSound("back01");
 
             WeaponSelectFilter filter = new WeaponSelectFilter();
             filter.addTeamColor(ID.TEAM_COLOR.BLUE);

@@ -1,4 +1,4 @@
-package com.game.gaika.FSM;
+package com.game.frame.FSM;
 
 import android.util.Log;
 

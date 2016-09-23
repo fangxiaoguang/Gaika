@@ -1,6 +1,5 @@
-package com.game.gaika.FSM;
+package com.game.frame.FSM;
 
-import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
 

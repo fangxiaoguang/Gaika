@@ -13,9 +13,9 @@ import org.andengine.entity.IEntityMatcher;
 import org.andengine.entity.scene.Scene;
 import org.andengine.entity.shape.RectangularShape;
 
-import com.game.gaika.FSM.FSMClass;
-import com.game.gaika.FSM.IMessageHandler;
-import com.game.gaika.FSM.TouchMessage;
+import com.game.frame.FSM.FSMClass;
+import com.game.frame.FSM.IMessageHandler;
+import com.game.frame.FSM.TouchMessage;
 import com.game.gaika.data.GameSetup;
 import com.game.gaika.data.ID;
 import com.game.gaika.data.Pair;

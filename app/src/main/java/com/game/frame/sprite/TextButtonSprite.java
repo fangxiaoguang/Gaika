@@ -1,6 +1,6 @@
 package com.game.frame.sprite;
 
-import com.game.gaika.FSM.TouchMessage;
+import com.game.frame.FSM.TouchMessage;
 import com.game.frame.flyweight.NormalFlyweight;
 import com.game.frame.flyweight.TextFlyweight;
 import com.game.frame.texture.TexRegionManager;

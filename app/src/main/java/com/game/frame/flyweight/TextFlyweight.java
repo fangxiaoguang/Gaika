@@ -1,7 +1,6 @@
 package com.game.frame.flyweight;
 
-import com.game.frame.flyweight.BaseFlyweight;
-import com.game.gaika.FSM.TouchMessage;
+import com.game.frame.FSM.TouchMessage;
 import com.game.gaika.main.MainActivity;
 
 import org.andengine.entity.shape.RectangularShape;

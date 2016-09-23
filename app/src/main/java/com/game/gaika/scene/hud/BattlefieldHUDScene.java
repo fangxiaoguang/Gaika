@@ -1,8 +1,8 @@
 package com.game.gaika.scene.hud;
 
 import com.game.frame.scene.hud.HUDScene;
-import com.game.gaika.FSM.IMessageHandler;
-import com.game.gaika.FSM.TouchMessage;
+import com.game.frame.FSM.IMessageHandler;
+import com.game.frame.FSM.TouchMessage;
 
 import static com.game.gaika.data.ID.SCENE_ID.*;
 

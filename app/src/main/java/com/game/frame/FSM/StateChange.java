@@ -1,7 +1,4 @@
-package com.game.gaika.FSM;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.game.frame.FSM;
 
 /**
  * Created by fangxg on 2015/6/19.

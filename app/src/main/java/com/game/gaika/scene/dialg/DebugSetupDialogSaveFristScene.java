@@ -4,7 +4,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.game.frame.scene.dialg.DialogScene;
-import com.game.gaika.FSM.TouchMessage;
+import com.game.frame.FSM.TouchMessage;
 import com.game.gaika.data.ID;
 import com.game.frame.db.DatabaseManager;
 import com.game.gaika.debug.DebugManager;

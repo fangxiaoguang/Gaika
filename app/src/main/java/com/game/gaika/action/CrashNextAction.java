@@ -1,6 +1,6 @@
 package com.game.gaika.action;
 
-import com.game.gaika.FSM.TouchMessage;
+import com.game.frame.FSM.TouchMessage;
 import com.game.gaika.data.EffectNode;
 import com.game.gaika.data.GameDataManager;
 import com.game.gaika.data.GameSetup;

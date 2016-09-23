@@ -34,7 +34,7 @@ public class Test1 {
     public void sayHello(){
 
         long l1 = System.currentTimeMillis();
-        GameDriver d = new GameDriver<MainActivity>(mActivityRule.getActivity() );
+        GameDriver d = new GameDriver<MainActivity>(mActivityRule.getActivity() ); //ss
 
         d.waitScenc(com.game.gaika.data.ID.SCENE_ID.LOGO_3);
         long l2 = System.currentTimeMillis();

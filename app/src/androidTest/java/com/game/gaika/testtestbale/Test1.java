@@ -26,7 +26,8 @@ package com.game.gaika.testtestbale;
 public class Test1 {
 
     @Rule
-    public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule(MainActivity.class);
+    public ActivityTestRule<MainActivity> mActivityRule
+            = new ActivityTestRule(MainActivity.class);
 
 
 

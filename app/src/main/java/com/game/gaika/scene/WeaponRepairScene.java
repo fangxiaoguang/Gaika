@@ -1,8 +1,7 @@
 package com.game.gaika.scene;
 
-import com.game.frame.scene.BaseLogicScene;
-import com.game.frame.FSM.IMessageHandler;
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.IMessageHandler;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.action.BaseAction;
 import com.game.gaika.action.GameOverDilogNoAction;
 import com.game.gaika.action.GameOverDilogYesAction;
@@ -16,11 +15,11 @@ import com.game.gaika.scene.sub.FlagsSubScene;
 import com.game.gaika.scene.sub.SortsSubScene;
 import com.game.gaika.scene.sub.TopButtosSubScene;
 import com.game.gaika.scene.sub.borderSubScene;
-import com.game.frame.sprite.NormalSprite;
-import com.game.frame.sprite.NumberSprite;
+import com.game.gaika.sprite.NormalSprite;
+import com.game.gaika.sprite.NumberSprite;
 import com.game.gaika.sprite.TeamBuildWeaponSprite;
 import com.game.gaika.sprite.WeaponInfoSprite;
-import com.game.frame.string.StringManager;
+import com.game.gaika.string.StringManager;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -44,7 +43,7 @@ import static com.game.gaika.data.ID.STOR_TYPE.TYPE;
 import static com.game.gaika.data.ID.TEAM_COLOR.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
-import static com.game.frame.sound.SoundManager.playSound;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/30.

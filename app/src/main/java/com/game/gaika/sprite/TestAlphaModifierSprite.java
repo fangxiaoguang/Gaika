@@ -1,7 +1,6 @@
 package com.game.gaika.sprite;
 
-import com.game.frame.flyweight.NormalFlyweight;
-import com.game.frame.sprite.BaseSprite;
+import com.game.gaika.flyweight.NormalFlyweight;
 
 /**
  * Created by fangxg on 2015/9/3.

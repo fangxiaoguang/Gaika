@@ -1,16 +1,15 @@
 package com.game.gaika.scene.dialg;
 
-import com.game.frame.scene.dialg.DialogScene;
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.City;
 import com.game.gaika.data.GameDataManager;
 import com.game.gaika.data.GameSetup;
 import com.game.gaika.data.ID;
 import com.game.gaika.data.weapon.BaseWeapon;
 import com.game.gaika.data.weapon.WeaponInfo;
-import com.game.frame.scene.BaseLogicScene;
+import com.game.gaika.scene.BaseLogicScene;
 import com.game.gaika.sprite.BottomMessageSprite;
-import com.game.frame.sprite.DelaySprite;
+import com.game.gaika.sprite.DelaySprite;
 import com.game.gaika.sprite.WeaponInfoSprite;
 
 import java.util.ArrayList;

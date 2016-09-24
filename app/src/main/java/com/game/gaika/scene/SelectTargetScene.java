@@ -1,8 +1,7 @@
 package com.game.gaika.scene;
 
-import com.game.frame.scene.BaseLogicScene;
-import com.game.frame.FSM.IMessageHandler;
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.IMessageHandler;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.action.BaseAction;
 import com.game.gaika.action.GameOverDilogNoAction;
 import com.game.gaika.action.GameOverDilogYesAction;
@@ -13,18 +12,18 @@ import com.game.gaika.data.WeaponSelectFilter;
 import com.game.gaika.data.weapon.BaseWeapon;
 import com.game.gaika.scene.sub.TopButtosSubScene;
 import com.game.gaika.scene.sub.borderSubScene;
-import com.game.frame.sprite.NormalSprite;
-import com.game.frame.sprite.NumberSprite;
+import com.game.gaika.sprite.NormalSprite;
+import com.game.gaika.sprite.NumberSprite;
 import com.game.gaika.sprite.SelectChapterSprite;
-import com.game.frame.sprite.TextSprite;
-import com.game.frame.texture.TexRegionManager;
+import com.game.gaika.sprite.TextSprite;
+import com.game.gaika.texture.TexRegionManager;
 
 import java.util.List;
 
 import static com.game.gaika.data.ID.COUNTRY.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
 import static com.game.gaika.data.ID.SCENE_ID.*;
-import static com.game.frame.sound.SoundManager.playSound;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/7/1.

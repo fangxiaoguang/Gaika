@@ -1,12 +1,12 @@
 package com.game.gaika.scene.sub;
 
-import com.game.frame.FSM.IMessageHandler;
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.IMessageHandler;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.ID;
-import com.game.frame.scene.BaseLogicScene;
+import com.game.gaika.scene.BaseLogicScene;
 import com.game.gaika.scene.SceneFactory;
 import com.game.gaika.scene.SceneManager;
-import com.game.frame.sprite.NormalSprite;
+import com.game.gaika.sprite.NormalSprite;
 
 import java.util.Set;
 
@@ -14,7 +14,7 @@ import static com.game.gaika.data.ID.COUNTRY.*;
 import static com.game.gaika.data.ID.MSG_ID.*;
 
 import static com.game.gaika.data.ID.SCENE_ID.*;
-import static com.game.frame.sound.SoundManager.playSound;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 /**
  * Created by fangxg on 2015/6/23.

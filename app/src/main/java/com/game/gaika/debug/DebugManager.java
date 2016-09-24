@@ -4,12 +4,12 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.GameDataManager;
 import com.game.gaika.data.GameSetup;
 import com.game.gaika.data.ID;
 import com.game.gaika.data.SaveManager;
-import com.game.frame.db.DatabaseManager;
+import com.game.gaika.db.DatabaseManager;
 
 /**
  * Created by fangxg on 2015/7/18.

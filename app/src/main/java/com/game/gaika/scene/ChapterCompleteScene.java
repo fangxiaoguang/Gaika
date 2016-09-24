@@ -1,21 +1,20 @@
 package com.game.gaika.scene;
 
-import com.game.frame.scene.BaseLogicScene;
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.GameDataManager;
 import com.game.gaika.data.ID;
 import com.game.gaika.data.WeaponSelectFilter;
 import com.game.gaika.data.weapon.BaseWeapon;
-import com.game.frame.sprite.NormalSprite;
-import com.game.frame.sprite.NumberSprite;
-import com.game.frame.sprite.TextSprite;
-import com.game.frame.string.StringManager;
-import com.game.frame.texture.TexRegionManager;
+import com.game.gaika.sprite.NormalSprite;
+import com.game.gaika.sprite.NumberSprite;
+import com.game.gaika.sprite.TextSprite;
+import com.game.gaika.string.StringManager;
+import com.game.gaika.texture.TexRegionManager;
 
 import java.util.List;
 
-import static com.game.frame.sound.SoundManager.playSound;
-import static com.game.frame.sound.SoundManager.stopSound;
+import static com.game.gaika.sound.SoundManager.playSound;
+import static com.game.gaika.sound.SoundManager.stopSound;
 
 
 /**

@@ -6,20 +6,20 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.KeyEvent;
 
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.GameSetup;
 import com.game.gaika.data.ID;
 import com.game.gaika.data.SaveManager;
 import com.game.gaika.debug.DebugManager;
-import com.game.frame.scene.BaseLogicScene;
+import com.game.gaika.scene.BaseLogicScene;
 import com.game.gaika.scene.BeginMenuSceen;
 import com.game.gaika.scene.Logo1Scene;
 import com.game.gaika.scene.SceneManager;
 import com.game.gaika.scene.dialg.DebugSetupDialogMainScene;
-import com.game.frame.sound.SoundManager;
-import com.game.frame.sprite.BaseSprite;
-import com.game.frame.texture.TexRegionManager;
-import com.game.frame.tool.Tools;
+import com.game.gaika.sound.SoundManager;
+import com.game.gaika.sprite.BaseSprite;
+import com.game.gaika.texture.TexRegionManager;
+import com.game.gaika.tool.Tools;
 import com.game.test.GameElement;
 import com.game.test.Testable;
 

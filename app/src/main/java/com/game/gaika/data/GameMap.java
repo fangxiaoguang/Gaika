@@ -4,7 +4,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.game.gaika.data.weapon.BaseWeapon;
-import com.game.frame.db.DatabaseManager;
+import com.game.gaika.db.DatabaseManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;

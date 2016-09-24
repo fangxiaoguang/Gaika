@@ -3,16 +3,15 @@ package com.game.gaika.scene.dialg;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.game.frame.scene.dialg.DialogScene;
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.ID;
-import com.game.frame.db.DatabaseManager;
+import com.game.gaika.db.DatabaseManager;
 import com.game.gaika.debug.DebugManager;
-import com.game.frame.scene.BaseLogicScene;
+import com.game.gaika.scene.BaseLogicScene;
 import com.game.gaika.scene.SceneFactory;
 import com.game.gaika.scene.SceneManager;
-import com.game.frame.sprite.NormalSprite;
-import com.game.frame.sprite.TextButtonSprite;
+import com.game.gaika.sprite.NormalSprite;
+import com.game.gaika.sprite.TextButtonSprite;
 
 import java.util.ArrayList;
 import java.util.Collections;

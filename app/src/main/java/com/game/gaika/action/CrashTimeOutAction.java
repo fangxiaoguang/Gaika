@@ -7,7 +7,7 @@ import com.game.gaika.scene.BattlefieldScene;
 import com.game.gaika.scene.SceneManager;
 import com.game.gaika.scene.dialg.TurnBeginDialog;
 
-import static com.game.frame.sound.SoundManager.playSound;
+import static com.game.gaika.sound.SoundManager.playSound;
 
 
 /**

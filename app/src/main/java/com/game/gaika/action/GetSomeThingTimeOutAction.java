@@ -1,6 +1,6 @@
 package com.game.gaika.action;
 
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.GameDataManager;
 import com.game.gaika.data.GameSetup;
 import com.game.gaika.data.ID;
@@ -8,7 +8,7 @@ import com.game.gaika.scene.BattlefieldScene;
 import com.game.gaika.scene.ChapterCompleteScene;
 import com.game.gaika.scene.ChapterLoseScene;
 import com.game.gaika.scene.SceneManager;
-import com.game.frame.sprite.DelaySprite;
+import com.game.gaika.sprite.DelaySprite;
 
 import java.util.Random;
 

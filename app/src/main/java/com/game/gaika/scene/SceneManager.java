@@ -4,11 +4,10 @@ import org.andengine.engine.camera.hud.HUD;
 import org.andengine.entity.scene.Scene;
 import org.andengine.ui.activity.BaseGameActivity;
 
-import com.game.frame.scene.BaseLogicScene;
 import com.game.gaika.data.GameSetup;
-import com.game.frame.flyweight.BaseFlyweight;
+import com.game.gaika.flyweight.BaseFlyweight;
 import com.game.gaika.main.MainActivity;
-import com.game.frame.scene.dialg.DialogScene;
+import com.game.gaika.scene.dialg.DialogScene;
 //import com.game.gaika.profile.Profile;
 
 

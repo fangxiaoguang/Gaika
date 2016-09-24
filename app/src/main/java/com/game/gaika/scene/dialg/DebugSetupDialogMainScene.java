@@ -1,14 +1,13 @@
 package com.game.gaika.scene.dialg;
 
-import com.game.frame.scene.dialg.DialogScene;
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.ID;
 import com.game.gaika.debug.DebugManager;
-import com.game.frame.scene.BaseLogicScene;
+import com.game.gaika.scene.BaseLogicScene;
 import com.game.gaika.scene.BattlefieldScene;
 import com.game.gaika.scene.SceneFactory;
 import com.game.gaika.scene.SceneManager;
-import com.game.frame.sprite.TextButtonSprite;
+import com.game.gaika.sprite.TextButtonSprite;
 
 /**
  * Created by fangxg on 2015/8/16.

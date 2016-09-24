@@ -1,17 +1,16 @@
 package com.game.gaika.scene.dialg;
 
-import com.game.frame.scene.dialg.DialogScene;
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.GameDataManager;
 import com.game.gaika.data.ID;
 import com.game.gaika.data.weapon.WeaponFactory;
 import com.game.gaika.data.weapon.WeaponInfo;
-import com.game.frame.scene.BaseLogicScene;
-import com.game.frame.sprite.NormalSprite;
-import com.game.frame.sprite.TextSprite;
+import com.game.gaika.scene.BaseLogicScene;
+import com.game.gaika.sprite.NormalSprite;
+import com.game.gaika.sprite.TextSprite;
 import com.game.gaika.sprite.WeaponInfoSprite;
-import com.game.frame.string.StringManager;
-import com.game.frame.texture.TexRegionManager;
+import com.game.gaika.string.StringManager;
+import com.game.gaika.texture.TexRegionManager;
 
 import static com.game.gaika.data.ID.SCENE_ID.*;
 

@@ -1,17 +1,16 @@
 package com.game.gaika.sprite;
 
 
-import com.game.frame.sprite.BaseSprite;
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.GameSetup;
 import com.game.gaika.data.ID;
 import com.game.gaika.data.MapNode;
 import com.game.gaika.data.Pair;
 import com.game.gaika.data.weapon.BaseWeapon;
-import com.game.frame.flyweight.AnimeFlyweight;
-import com.game.frame.flyweight.NormalFlyweight;
-import com.game.frame.flyweight.TextFlyweight;
-import com.game.frame.texture.TexRegionManager;
+import com.game.gaika.flyweight.AnimeFlyweight;
+import com.game.gaika.flyweight.NormalFlyweight;
+import com.game.gaika.flyweight.TextFlyweight;
+import com.game.gaika.texture.TexRegionManager;
 
 import org.andengine.entity.modifier.PathModifier;
 import org.andengine.entity.modifier.SequenceEntityModifier;

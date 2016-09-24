@@ -8,7 +8,7 @@ import android.util.Log;
 import com.game.gaika.data.weapon.BaseWeapon;
 import com.game.gaika.data.weapon.WeaponFactory;
 import com.game.gaika.data.weapon.WeaponInfo;
-import com.game.frame.db.DatabaseManager;
+import com.game.gaika.db.DatabaseManager;
 import com.game.gaika.scene.SceneManager;
 
 import java.io.FileInputStream;

@@ -1,9 +1,8 @@
 package com.game.gaika.scene;
 
-import com.game.frame.scene.BaseLogicScene;
-import com.game.frame.FSM.TouchMessage;
+import com.game.gaika.FSM.TouchMessage;
 import com.game.gaika.data.ID;
-import com.game.frame.sprite.NormalSprite;
+import com.game.gaika.sprite.NormalSprite;
 
 /**
  * Created by fangxg on 2015/7/27.
